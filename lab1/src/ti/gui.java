@@ -13,7 +13,7 @@ public class gui {
 	public void show() {
 		g.calcShortPath("new");
 	}
-    void java_thread(String word1) {
+    void javaThread(String word1) {
     	Thread t = new Thread(new Runnable() {
     		public void run() {
     			g.calcShortPath(word1);
@@ -21,7 +21,7 @@ public class gui {
     	});
     	t.start();
     }
-    void java_thread1() {
+    void javaThread1() {
     	Thread t = new Thread(new Runnable() {
     		public void run() {
     			g.randomwalk();
@@ -29,7 +29,7 @@ public class gui {
     	});
     	t.start();
     }
-    void java_thread2(String word1,String word2) {
+    void javaThread2(String word1,String word2) {
     	Thread t = new Thread(new Runnable() {
     		public void run() {
     			g.calcShortPath(word1, word2);
@@ -80,7 +80,7 @@ public class gui {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						flag = true;
-						java_thread(text.getText());
+						javaThread(text.getText());
 						f.dispose();
 						//mm();
 					}
@@ -99,7 +99,7 @@ public class gui {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				java_thread1();
+				javaThread1();
 			}
 		});
         button3.addActionListener(new ActionListener() {
@@ -192,7 +192,7 @@ public class gui {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						// TODO Auto-generated method stub
-					    java_thread2(text.getText(), text1.getText());
+					    javaThread2(text.getText(), text1.getText());
 						ff.dispose();
 					}
 				});
@@ -208,8 +208,8 @@ public class gui {
 
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
-        gui G = new gui();
-        G.init();
+        gui g = new gui();
+        g.init();
 
 	}
 
