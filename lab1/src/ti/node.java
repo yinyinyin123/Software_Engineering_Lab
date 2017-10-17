@@ -1,4 +1,4 @@
-package ½á¶Ô±à³Ì;
+package ti;
 
 public class node {
     private String word;
