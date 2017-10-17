@@ -158,11 +158,11 @@ public class graph {
 //    	String[] insert_words = new String[100];
 //    	String[] words;
     	Scanner in = new Scanner(System.in);
-    	Random rand = new Random();
+    //	Random rand = new Random();
     	System.out.println("Please input the text:");
     	String text = in.nextLine();
     	text = text.toUpperCase();
-    	text =  text.replaceAll("[,!£¡£¬-¡£.?£¿¡ª¡ª¡ª¡ª\"\'¡®¡±¡°¡¯]", " ");
+    	text =  text.replaceAll("[\\p{Punct}]+", " ");
     	//words = text.split("\\s+");
 //    	for(int i = 0 ; i<100 ; i++) {
 //    		insert_words[i] = "";
@@ -336,7 +336,7 @@ public class graph {
     }
     public void creat_graph() throws IOException {
     	node pr = null , p;
-    	Scanner in = new Scanner(System.in);
+    //	Scanner in = new Scanner(System.in);
     	file_read fr = new file_read();
     	ArrayList<String> words = fr.read();
     	for(int i = 0 ; i < words.size(); i++) {
