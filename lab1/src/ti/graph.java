@@ -307,7 +307,7 @@ public class graph {
         		 frame.set_label(label_way);
         		 //frame.repaint();
   			     try {
-  				    Thread.sleep(1000);
+  				    // Thread.sleep(1000);
   				    frame.repaint();
   			     }catch(Exception e) {
   				    System.exit(0);

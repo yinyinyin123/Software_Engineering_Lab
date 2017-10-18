@@ -78,7 +78,7 @@ public class file_read {
 		file.read();
 		System.out.println(11);
 		// String str = ",,.!，，D_NAME。！；‘’”“**dfs #$%^&()-+1431221\"\"中
-		// 国123漢字かどうかのjavaを決定";
+		// 国123漢字かどうかはjavaが決定する";
 		// str = str.replaceAll("[\\pP]", "");
 		// System.out.println(str);
 
