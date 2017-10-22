@@ -15,6 +15,7 @@ public class dijkstra {
 		this.num = num;
 	}
 
+	/** 。 */
 	public dijkstra(ArrayList<edge> Edge, int start, int num) {
 		this.num = num;
 		this.start = start;
