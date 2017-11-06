@@ -6,5 +6,6 @@
 	<classpathentry exported="true" kind="lib" path="D:/net.sf.eclipsecs-updatesite_8.0.0.201707161819/artifacts.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/net.sf.eclipsecs-updatesite_8.0.0.201707161819/plugins/net.sf.eclipsecs.branding_8.0.0.201707161029.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/net.sf.eclipsecs-updatesite_8.0.0.201707161819/plugins/net.sf.eclipsecs.checkstyle.source_8.0.0.201707161252.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

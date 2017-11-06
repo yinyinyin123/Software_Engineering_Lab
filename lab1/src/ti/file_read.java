@@ -13,7 +13,7 @@ public class file_read {
 	private String file_name;
 
 	public file_read() {
-		file_name = "";
+		file_name = "D:/123.txt";
 		words = new ArrayList<String>();
 	}
 
@@ -35,7 +35,7 @@ public class file_read {
 	}
 
 	public ArrayList<String> read() throws IOException {
-		get_filename();
+		//get_filename();
 		System.out.println(file_name);
 		if (file_name == "" || file_name.length() <= 3 || 
 				!file_name.substring(file_name.length() - 3).equals("txt")) {
