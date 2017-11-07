@@ -187,6 +187,7 @@ public class graph {
     }
     public String randomwalk() {
     	 String solution = "";
+    	 String ooo="13";
     	 int m,n;
     	 ArrayList<Integer> end = new ArrayList<Integer>();
     	 stop_anytime s = new stop_anytime();
@@ -228,13 +229,15 @@ public class graph {
     			m = n;
     		}
     		else {
+    			System.out.println("wda");
+    			solution = solution.substring(0, solution.length()-1);
     			break;
     		}}
     		else { break;}
     	 }
     	 file_out f = new file_out(solution);
     	 f.output();
-    	 //System.out.println(solution);
+    	 System.out.println(solution);
     	 return solution;	 
     }
     String start_to_end(int start,int end,int[] way) {
@@ -334,10 +337,10 @@ public class graph {
 			    System.exit(0);
 		     } 
     }
-    public void creat_graph() throws IOException {
+    public void creat_graph(String filename) throws IOException {
     	node pr = null , p;
     //	Scanner in = new Scanner(System.in);
-    	file_read fr = new file_read();
+    	file_read fr = new file_read(filename);
     	ArrayList<String> words = fr.read();
     	for(int i = 0 ; i < words.size(); i++) {
     		if(new_node(words.get(i))) {
@@ -437,7 +440,7 @@ public class graph {
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
         graph g = new graph();
-        g.creat_graph();
+        g.creat_graph("D:/123.txt");
      //   g.function_three();
         Scanner in  =new Scanner(System.in);
         interactive();

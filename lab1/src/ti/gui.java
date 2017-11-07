@@ -40,7 +40,7 @@ public class gui {
     public void init() throws IOException{
     	JFrame frame = new JFrame();
     	JPanel panel = new JPanel();
-    	g.creat_graph();
+    	g.creat_graph("D:/123.txt");
     	//show();
     	JButton button = new JButton("展示有向图");
     	JButton button1 = new JButton("最短路径(all)");

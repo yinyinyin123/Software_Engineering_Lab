@@ -12,8 +12,8 @@ public class file_read {
 	private ArrayList<String> words;
 	private String file_name;
 
-	public file_read() {
-		file_name = "";
+	public file_read(String filenn) {
+		file_name = filenn;
 		words = new ArrayList<String>();
 	}
 
@@ -35,7 +35,7 @@ public class file_read {
 	}
 
 	public ArrayList<String> read() throws IOException {
-		get_filename();
+		//get_filename();
 		System.out.println(file_name);
 		if (file_name == "" || file_name.length() <= 3 || 
 				!file_name.substring(file_name.length() - 3).equals("txt")) {
@@ -74,7 +74,7 @@ public class file_read {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		file_read file = new file_read();
+		file_read file = new file_read("D:/123.txt");
 		file.read();
 		System.out.println(11);
 		// String str = ",,.!£¬£¬D_NAME¡££¡£»¡®¡¯¡±¡°**dfs #$%^&()-+1431221\"\"ÖÐ

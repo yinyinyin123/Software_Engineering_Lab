@@ -42,11 +42,5 @@ public class stop_anytime {
 		label.repaint();
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		stop_anytime s = new stop_anytime();
-		s.setlabel("good");
-		s.show();
-	}
 
 }
