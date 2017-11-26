@@ -17,7 +17,7 @@ public class testcase3 {
 	public void testQueryBridgeWords() throws IOException{
 		//fail("Not yet implemented");
 		graph G = new graph();
-		G.creat_graph();
+		G.creat_graph("D:/123.txt");
 		//第一个单词不存在
 		String words = G.queryBridgeWords("good", "out");
 		assertEquals("No \"good\" in the graph!", words);		

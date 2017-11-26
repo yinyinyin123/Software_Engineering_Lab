@@ -12,7 +12,7 @@ public class testcase2 {
 	public void testQueryBridgeWords() throws IOException{
 		//fail("Not yet implemented");
 		graph G = new graph();
-		G.creat_graph();
+		G.creat_graph("D:/123.txt");
 		//俩个存在的词中没有桥接词
         String words =  G.queryBridgeWords("to", "seek");
 		assertEquals("No bridge words from \"to\" to \"seek\"!", words);

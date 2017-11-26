@@ -18,7 +18,7 @@ public class testcase4 {
 		//fail("Not yet implemented");
 		//第二个词不存在
 		graph G = new graph();
-		G.creat_graph();
+		G.creat_graph("D:/123.txt");
 		String words = G.queryBridgeWords("out", "good");
 		assertEquals("No \"good\" in the graph!", words);
 	}

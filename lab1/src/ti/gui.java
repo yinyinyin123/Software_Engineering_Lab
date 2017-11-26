@@ -9,38 +9,16 @@ import javax.swing.*;
 
 public class gui {
 	private graph g = new graph();
+	private control C = new control();
 	private boolean flag = false;
 	public void show() {
 		g.calcShortPath("new");
 	}
-    void javaThread(String word1) {
-    	Thread t = new Thread(new Runnable() {
-    		public void run() {
-    			g.calcShortPath(word1);
-    		}
-    	});
-    	t.start();
-    }
-    void javaThread1() {
-    	Thread t = new Thread(new Runnable() {
-    		public void run() {
-    			g.randomwalk();
-    		}
-    	});
-    	t.start();
-    }
-    void javaThread2(String word1,String word2) {
-    	Thread t = new Thread(new Runnable() {
-    		public void run() {
-    			g.calcShortPath(word1, word2);
-    		}
-    	});
-    	t.start();
-    }
     public void init() throws IOException{
     	JFrame frame = new JFrame();
     	JPanel panel = new JPanel();
-    	g.creat_graph("D:/123.txt");
+//    	g.creat_graph("D:/123.txt");
+    	C.create_graph("D:/123.txt");
     	//show();
     	JButton button = new JButton("展示有向图");
     	JButton button1 = new JButton("最短路径(all)");
@@ -63,7 +41,8 @@ public class gui {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				g.function_two();
+//				g.function_two();
+				C.show_graph();
 			}
 		});
     	button1.addActionListener(new ActionListener() {
@@ -80,9 +59,9 @@ public class gui {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						flag = true;
-						javaThread(text.getText());
+//						javaThread(text.getText());
+						C.func_calushortpath(text.getText());
 						f.dispose();
-						//mm();
 					}
 				});
 				p.add(text);
@@ -99,7 +78,8 @@ public class gui {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				javaThread1();
+//				javaThread1();
+				C.func_randomwalk();
 			}
 		});
         button3.addActionListener(new ActionListener() {
@@ -121,7 +101,7 @@ public class gui {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						// TODO Auto-generated method stub
-						String temp = g.solution(text.getText().replaceAll("[^a-z^A-Z]", " "));
+						String temp = C.new_text(text.getText().replaceAll("[^a-z^A-Z]", " "));
 						JFrame f = new JFrame();
 						JLabel l = new JLabel(temp);;
 						f.add(l);
@@ -129,9 +109,7 @@ public class gui {
 						f.setSize(800,100);
 						j.dispose();
 					}
-				});
-				
-				
+				});	
 			}
 		});
         button4.addActionListener(new ActionListener() {
@@ -155,7 +133,7 @@ public class gui {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						// TODO Auto-generated method stub
-						String temp = g.queryBridgeWords(text.getText(), text1.getText());
+						String temp = C.Bridgewords(text.getText(), text1.getText());
 						JFrame n = new JFrame();
 						JLabel l = new JLabel(temp);
 						n.add(l);
@@ -192,7 +170,8 @@ public class gui {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						// TODO Auto-generated method stub
-					    javaThread2(text.getText(), text1.getText());
+//					    javaThread2(text.getText(), text1.getText());
+						C.calushortpath_two(text.getText(), text1.getText());
 						ff.dispose();
 					}
 				});
@@ -200,12 +179,10 @@ public class gui {
 				ff.add(bb,BorderLayout.SOUTH);
 				ff.setVisible(true);
 				ff.setSize(1000, 400);
-				
 			}
 		});
      	//g.function_two();
     }
-
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
         gui g = new gui();

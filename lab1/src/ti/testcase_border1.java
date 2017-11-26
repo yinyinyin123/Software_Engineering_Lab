@@ -18,7 +18,7 @@ public class testcase_border1 {
 		//fail("Not yet implemented");
 		//²âÊÔ×ó±ß½ç
 		graph G = new graph();
-		G.creat_graph();
+		G.creat_graph("D:/123.txt");
 		String words = G.queryBridgeWords("to", "explore");
 		assertEquals("No bridge words from \"to\" to \"explore\"!", words);
 	}

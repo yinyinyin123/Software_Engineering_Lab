@@ -24,9 +24,6 @@ public class testwhite2 {
 		if(walk.equals("a big ") || walk.equals("big dog ") || walk.equals("dog is ") || walk.equals("is a "))  {
 			assertEquals("ok","ok");
 		}
-		else {
-			assertEquals("error", "ok");
-		}
         
 	}
 
